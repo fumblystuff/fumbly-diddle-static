@@ -6,15 +6,19 @@ The pub web site for Fumbly Diddle Software, built using the [Eleventy](https://
 
 ## Tasks
 
-- [ ] Favicon
 - [x] Blog page
 - [x] News page
 - [x] News Item: New Site
+- [ ] Favicon
+- [ ] Manifest
 - [ ] About page content
 - [ ] Product Page: Path Backup 
 - [ ] Product Page: Better Path Editor
 - [ ] Contact form
 - [ ] Breadcrumbs: News, Blog
+- [ ] Add error graphic to 404 page
+- [ ] 
+- [ ] 
 - [ ] 
 - [ ] 
 - [ ] Info email account
