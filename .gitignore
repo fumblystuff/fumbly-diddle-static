@@ -1,0 +1,9 @@
+# Folders
+node_modules/
+px-vortex-html/
+_site
+
+
+# Files
+px-vortex-html.zip
+.DS_Store

@@ -1,0 +1,4 @@
+Sitemap: https://www.johnwargo.com/sitemap.xml
+
+User-agent: *
+Disallow:

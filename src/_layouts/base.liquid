@@ -1,0 +1,30 @@
+---
+siteTitle: Fumbly Diddle Software
+---
+
+<!DOCTYPE HTML>
+<!--
+	Vortex by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+-->
+<html>
+
+<head>
+  <title>{{siteTitle}}: {{title}}</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta description="The internet home for Fumbly Diddle Software; we make apps" />
+	<meta keywords="Fumbly Diddle, Fumbly Diddle Software" />
+  <link rel="stylesheet" href="{{ "/" | htmlBaseUrl }}assets/css/main.css" />
+  {% include 'google-analytics.html' %}
+</head>
+
+<body class="is-preload">
+  {% include 'header.html' %}
+  {{ content }}
+  {% include 'footer.html' %}
+	{% include 'page-scripts.html' %}  
+</body>
+
+</html>
