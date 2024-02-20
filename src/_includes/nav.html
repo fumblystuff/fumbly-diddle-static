@@ -1,42 +1,25 @@
 {% assign navPages = collections.all | eleventyNavigation %}
 <nav id="nav">
   <ul>
-    {%- for entry in navPages %}
-    <li{% if entry.url==page.url %} class="current" {% endif %}>    
-      <a href="{{ entry.url }}" {% if entry.children %}class="icon solid fa-angle-down"{% endif %}>{{ entry.title }}</a>
-      {%- if entry.children %}
-      <ul>
-        {%- for child in entry.children %}
-        <li><a href="{{ child.url }}">{{ child.title }}</a></li>
-        {%- endfor %}
-      </ul>
-      {%- endif %}
-    </li>
+    {%- for entry in navPages %}    
+      <li{% if entry.url==page.url %} class="current"{% endif %}>
+        {%- if entry.url contains 'docs.' %}
+          <a href="{{ entry.url }}" target="_blank">{{ entry.title }}</a>
+        {%- else %}
+          {%- if entry.children.length > 0 %}
+            <a href="{{ entry.url }}" class="icon solid fa-angle-down">{{ entry.title }}</a>
+          {%- else %}
+            <a href="{{ entry.url }}">{{ entry.title }}</a>
+          {%- endif %}
+        {%- endif %}
+        {%- if entry.children.length > 0 %}
+        <ul>
+          {%- for child in entry.children %}
+          <li><a href="{{ child.url }}">{{ child.title }}</a></li>
+          {%- endfor %}
+        </ul>
+        {%- endif %}
+        </li>
     {%- endfor %}
   </ul>
 </nav>
-
-<!-- <nav id="nav">
-  <ul>
-    <li class="current"><a href="index.html">Home</a></li>
-    <li>
-      <a href="#" class="icon solid fa-angle-down">Dropdown</a>
-      <ul>
-        <li><a href="#">Option One</a></li>
-        <li><a href="#">Option Two</a></li>
-        <li><a href="#">Option Three</a></li>
-        <li>
-          <a href="#">Submenu</a>
-          <ul>
-            <li><a href="#">Option One</a></li>
-            <li><a href="#">Option Two</a></li>
-            <li><a href="#">Option Three</a></li>
-            <li><a href="#">Option Four</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="generic.html">Generic</a></li>
-    <li><a href="elements.html">Elements</a></li>
-  </ul>
-</nav> -->

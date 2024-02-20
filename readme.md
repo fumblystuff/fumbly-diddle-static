@@ -5,10 +5,13 @@ Doner t-bone capicola, biltong tri-tip filet mignon bacon leberkas tenderloin ba
 ## Tasks
 
 - [ ] Favicon
+- [x] Blog page
+- [x] News page
+- [ ] About page content
+- [ ] Product Page: Path Backup 
+- [ ] Product Page: Better Path Editor
 - [ ] Contact form
-- [ ] Products Page
-- [ ] Path Backup
-- [ ] Better Path Editor
+- [ ] News Item: New Site
 - [ ] 
 - [ ] 
 - [ ] 
@@ -19,19 +22,5 @@ Doner t-bone capicola, biltong tri-tip filet mignon bacon leberkas tenderloin ba
 - [ ] 
 - [ ] 
 - [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
+- [ ] Info email account
+- [ ] Support email account
