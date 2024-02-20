@@ -12,8 +12,9 @@ The pub web site for Fumbly Diddle Software, built using the [Eleventy](https://
 - [ ] Favicon
 - [ ] Manifest
 - [ ] About page content
-- [ ] Product Page: Path Backup 
-- [ ] Product Page: Better Path Editor
+- [ ] Add platform list to the Products page
+- [ ] Create a product layout and the platform list to the top of the page
+- [ ] Product Page: Path Backup content
 - [ ] Contact form
 - [ ] Breadcrumbs: News, Blog
 - [ ] Add error graphic to 404 page
