@@ -1,15 +1,10 @@
 ---
 layout: default
 ---
-{% assign previousPost = collections.post | getPreviousCollectionItem %}
-{% assign nextPost = collections.post | getNextCollectionItem %}
-{% include 'pretty-print.html' %}
+{% assign previousPost = collections.news | getPreviousCollectionItem %}
+{% assign nextPost = collections.news | getNextCollectionItem %}
 
-<p>
-  <strong>Posted:
-  </strong>
-  {{ date | readableDate }} |  
-</p>
+<p><strong>Posted:</strong> {{ date | readableDate }}</p>
 
 {{ content }}
 
