@@ -2,11 +2,21 @@
 layout: base
 ---
 
-<div id="wrapper">
-	<section class="main style1">		
-		<div class="inner">
-			<h1>{{title}}</h1>		
-			{{content}}
+<body class="is-preload">
+	{% include 'header.html' %}
+	<section id="main" class="wrapper style1">
+		<header class="major">
+			<h2>{{ title }}</h2>
+			{%- if description %}
+			<p>{{ description }}</p>
+			{%- endif %}
+		</header>
+		<div class="container">
+			<section id="content">
+				{{ content }}
+			</section>
 		</div>
 	</section>
-</div>
+	{% include 'footer.html' %}
+	{% include 'page-scripts.html' %}  
+</body>

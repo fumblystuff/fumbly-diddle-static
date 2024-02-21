@@ -12,7 +12,7 @@ eleventyNavigation:
     {%- for news in newsItems %}
     <li>
       <h4><a style="cursor: pointer" href="{{news.url}}">{{ news.data.title }}</a></h4>
-      <strong>Date:</strong>{{ news.date | readableDate }}
+      <strong>Date: </strong>{{ news.date | readableDate }}
       {%- if news.data.description %}
         <p>{{ news.data.description }}</p>
       {%- endif %}

@@ -9,6 +9,8 @@ The pub web site for Fumbly Diddle Software, built using the [Eleventy](https://
 - [x] Blog page
 - [x] News page
 - [x] News Item: New Site
+- [ ] Make products layout from Left template
+- [ ] Rebuild product lists as nav
 - [ ] Favicon
 - [ ] Manifest
 - [ ] Add platform list for each product to the Products page
