@@ -37,10 +37,6 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.setLibrary("md", markdownLib);
 
-  eleventyConfig.addShortcode("GetFirstProductUrl", function(product) {
-    return product.url.toLocaleString();
-  });
-
   eleventyConfig.addShortcode("GetKeywords", function (categories) {
     return categories.join(", ");
   });
