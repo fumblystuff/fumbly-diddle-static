@@ -2,26 +2,36 @@
 layout: base
 ---
 
-<div id="wrapper">
-	<section class="banner">
-		<div class="image" data-position="right">
-			<img src="images/mitchell-luo-FWoq_ldWlNQ-unsplash-cropped.jpg" alt="" />
-		</div>
-		<div class="content">			
-			<h1><strong>Fumble:</strong> To make awkward attempts to do or find something<br />
-			<strong>Diddle</strong>: To pass time aimlessly or unproductively.</h1>
+<body class="landing is-preload">
+	{% include 'header.html' %}
+
+	<section id="banner">
+		<div class="inner">
+			<h2>Fumble: To make awkward attempts to do or find something<br />
+				Diddle: To pass time aimlessly or unproductively.</h2>
 		</div>
 	</section>
 
-	<section class="main">
-		<header class="inner">
-			{{ content	}}
-			<ul class="actions special">
-				<li><a href="{{ "/" | htmlBaseUrl }}products/" class="button next">Products</a></li>
-			</ul>
-		</header>		
+	<section id="one" class="wrapper style2">
+		<div class="container">
+			<header class="major">
+				<h2>Who We Are</h2>
+				{{ content }}
+				<ul class="actions special">
+					<li>
+						<a href="{{ " /" | htmlBaseUrl }}products/" class="button large scrolly">Products</a>
+					</li>
+				</ul>
+			</header>
+		</div>
 	</section>
-	
-	<p>Photo by <a href="https://unsplash.com/@mitchel3uo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">Mitchell Luo</a> on <a href="https://unsplash.com/photos/black-and-white-striped-textile-FWoq_ldWlNQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">Unsplash</a>
-  </p>
-</div>
+
+	{% include 'footer.html' %}
+
+	<div class="container">
+		<p>Photo by <a href="https://unsplash.com/@mitchel3uo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+				target="_blank">Mitchell Luo</a> on <a href="https://unsplash.com/photos/black-and-white-striped-textile-FWoq_ldWlNQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">Unsplash</a></p>
+	</div>
+
+	{% include 'page-scripts.html' %}
+</body>

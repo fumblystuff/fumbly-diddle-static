@@ -1,9 +1,8 @@
 # Folders
 node_modules/
-px-vortex-html/
+px-drift-html/
 _site
 
-
 # Files
-px-vortex-html.zip
+px-drift-html.zip
 .DS_Store
