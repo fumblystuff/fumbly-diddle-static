@@ -8,14 +8,14 @@ layout: base
 	<section id="main" class="wrapper style1">
 		<header class="major">
 			<h2>Products</h2>
-			<p>Only one for now, but we have plans to publish more.</p>
+		{% comment %} <p>Only one for now, but we have plans to publish more.</p> {% endcomment %}
 		</header>
 		<div class="container">
 			<div class="row gtr-150">
 				<div class="col-4 col-12-medium">
 					<section id="sidebar">
 						<section>
-							<h3>Catalog</h3>
+							{% comment %} <h3>Catalog</h3> {% endcomment %}
 							{% assign products = collections.product %}
 							{%- if products.length > 0 %}
 							<ul class="alt">
