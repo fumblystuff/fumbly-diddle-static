@@ -37,6 +37,11 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.setLibrary("md", markdownLib);
 
+  eleventyConfig.addCollection('productList', function (collection) {
+    return collection.getFilteredByGlob("src/products/**/*.md")
+      .sort((a, b) => a.data.title.localeCompare(b.data.title))
+  });
+
   eleventyConfig.addShortcode("GetKeywords", function (categories) {
     return categories.join(", ");
   });

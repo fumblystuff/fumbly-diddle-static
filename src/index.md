@@ -6,4 +6,4 @@ eleventyNavigation:
   order: 1
 ---
 
-We're software developers building utilities and productivity applications for mobile devices and desktop computers. 
+We are software developers building utilities and productivity applications for mobile devices and desktop computers. 

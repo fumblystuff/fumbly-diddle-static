@@ -9,21 +9,22 @@ The pub web site for Fumbly Diddle Software, built using the [Eleventy](https://
 - [x] Blog page
 - [x] News page
 - [x] News Item: New Site
-- [ ] Make products layout from Left template
-- [ ] Rebuild product lists as nav
-- [ ] Favicon
-- [ ] Manifest
-- [ ] Add platform list for each product to the Products page
-- [ ] Create a product layout and add the platform list to the top of the page
-- [ ] Implement image extension
+- [x] Make products layout from Left template
+- [x] Rebuild product lists as nav
+- [x] Favicon
+- [x] Manifest
+- [x] Add the platform list to the top of the product listing
+- [x] Add platform list for each product to the Products page
 - [ ] About page content
+- [ ] Path Backup page content
+- [ ] Implement image extension
+- [ ] Add error graphic to 404 page
+- [ ] Add Platforms pages
 - [ ] Contact form
 - [ ] Breadcrumbs: News, Blog
-- [ ] Add error graphic to 404 page
 - [ ] 
 - [ ] 
 - [ ] 
-- [ ] Product Page: Path Backup content
 - [ ] Add Platforms page to the site (all products grouped by platforms) use data file or categories extension
 - [ ] Add All Products link (to current page) and Platforms menu options to the Products menu
 - [ ] 

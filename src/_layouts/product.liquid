@@ -2,6 +2,9 @@
 layout: base
 ---
 
+{% assign products = collections.productList %}
+
+
 <body class="is-preload">
 	{% include 'header.html' %}
 
@@ -16,12 +19,17 @@ layout: base
 					<section id="sidebar">
 						<section>
 							{% comment %} <h3>Catalog</h3> {% endcomment %}
-							{% assign products = collections.product %}
 							{%- if products.length > 0 %}
 							<ul class="alt">
 								{%- for product in products %}
 								<li>
 									<h4><a style="cursor: pointer" href="{{product.url}}">{{ product.data.title }}</a></h4>
+									{% for plat in platform %}
+									{% comment %} <a href="/platform/{{ plat | slugify }}">{{ plat }}</a> {% endcomment %}
+									{{ plat }}
+									{%- unless forloop.last %},
+									{% endunless %}
+								{% endfor %}
 									{% comment %} {%- if product.data.description %}
 									<p>{{ product.data.description }}</p>
 									{%- endif %} {% endcomment %}
@@ -35,10 +43,16 @@ layout: base
 					</section>
 				</div>
 				<div class="col-8 col-12-medium imp-medium">
-					<section id="content">
-						{% if title != 'Products' %}
-						<h3>{{title}}</h3>
-						{% endif %}
+					<section id="content">						
+						<h3>{{title}}</h3>						
+						<strong>Platforms:</strong>
+						{% for plat in platform %}
+							{% comment %} <a href="/platform/{{ plat | slugify }}">{{ plat }}</a> {% endcomment %}
+							{{ plat }}
+							{%- unless forloop.last %},
+							{% endunless %}
+						{% endfor %}
+						<hr />
 						{{ content }}
 					</section>
 				</div>
