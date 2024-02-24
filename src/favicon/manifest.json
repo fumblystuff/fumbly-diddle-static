@@ -1,6 +1,7 @@
 {
   "name": "Fumbly Diddle Software",
   "short_name": "Fumbly Diddle",
+  "start_url": "/",
   "description": "Home of Fumbly Diddle Software",
   "display": "standalone",
   "theme_color": "#358bca", 
