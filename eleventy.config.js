@@ -42,6 +42,14 @@ module.exports = eleventyConfig => {
       .sort((a, b) => a.data.title.localeCompare(b.data.title))
   });
 
+  eleventyConfig.addShortcode("FirstProductUrl", async function () {
+    console.log('#####');
+    let products  = collection.getFilteredByGlob("src/products/**/*.md")
+    .sort((a, b) => a.data.title.localeCompare(b.data.title));
+    console.dir(products);
+    return products[0].url;
+  });
+
   eleventyConfig.addShortcode("GetKeywords", function (categories) {
     return categories.join(", ");
   });
