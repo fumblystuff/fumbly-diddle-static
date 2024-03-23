@@ -1,6 +1,6 @@
 #!/usr/bin/env zx
 
-const algoliaPrefix = 'JMW_';
+// const algoliaPrefix = 'JMW_';
 
 // With ZX the first three commands are the node executable, the zx executable, and the script name
 // [
@@ -64,10 +64,10 @@ await $`gen-build-info src/_data`;
 console.log('\nBuilding site');
 await $`eleventy`;
 
-if (updateIndex) {
-  console.log('\nUpdating Algolia Index');
-  await $`algolia-idxup _site/algolia.json ${algoliaPrefix} -f ../algolia-creds.json`;
-}
+// if (updateIndex) {
+//   console.log('\nUpdating Algolia Index');
+//   await $`algolia-idxup _site/algolia.json ${algoliaPrefix} -f ../algolia-creds.json`;
+// }
 
 await $`git add -A`;
 await $`git commit -m ${theArgs[0]}`;
