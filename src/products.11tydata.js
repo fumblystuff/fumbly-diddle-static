@@ -4,32 +4,11 @@ module.exports = {
   eleventyComputed: {
     eleventyNavigation: {
       url: (data) => {
-        console.dir(data);
-        console.dir(data.collections);
-        console.dir(data.collections.product);
         const productCollection = data.collections.product;
-        const firstPost = productCollection[0];
-        return firstPost.url;
+        if (productCollection.length > 0) {
+          return productCollection[0].page.url;
+        }
       },
     }
   }
 };
-
-// // Shorter version
-// module.exports = {
-//   eleventyComputed: {
-//     eleventyNavigation: {
-//       url: (data) => {
-//         return data.collections.product[0].url;
-//       },
-//     }
-//   }
-// };
-
-// module.exports = {
-//   eleventyComputed: {
-//     eleventyNavigation: {
-//       url: 'this is a test',
-//     }
-//   }
-// };
