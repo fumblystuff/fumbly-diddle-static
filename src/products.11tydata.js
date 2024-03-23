@@ -1,12 +1,4 @@
-// module.exports = {
-//   eleventyComputed: {
-//     eleventyNavigation: {
-//       url: (data) => {
-//         return data.collections.product[0].url;
-//       },
-//     }
-//   }
-// };
+// https://discord.com/channels/741017160297611315/1210750763685511168
 
 module.exports = {
   eleventyComputed: {
@@ -23,6 +15,16 @@ module.exports = {
   }
 };
 
+// // Shorter version
+// module.exports = {
+//   eleventyComputed: {
+//     eleventyNavigation: {
+//       url: (data) => {
+//         return data.collections.product[0].url;
+//       },
+//     }
+//   }
+// };
 
 // module.exports = {
 //   eleventyComputed: {
@@ -31,17 +33,3 @@ module.exports = {
 //     }
 //   }
 // };
-
-
-// https://discord.com/channels/741017160297611315/1210750763685511168
-
-// module.exports = () => ({
-//   eleventyComputed: {
-//     foo: (data) => {
-//       const fooCollection = data.collections.foo;
-//       const firstPost = fooCollection[0];
-//       return firstPost.page.url; // this may need to be firstPost.data.page.url but I can never remember which to use where
-//     },
-//     // alternative formulation: foo: (data) => data.collections.foo[0].page.url
-//   },
-// });
