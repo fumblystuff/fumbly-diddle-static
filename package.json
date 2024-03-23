@@ -1,6 +1,6 @@
 {
   "name": "fumbly-diddle-static",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Static web site for https://fumblydiddle.com",
   "main": "eleventy.config.js",
   "scripts": {
