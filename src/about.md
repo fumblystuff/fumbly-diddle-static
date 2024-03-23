@@ -6,10 +6,12 @@ eleventyNavigation:
   order: 9
 ---
 
-Bacon ipsum dolor amet kielbasa meatball porchetta rump tail fatback buffalo chicken pork chop cupim ham hock. Tenderloin ham hock burgdoggen t-bone jowl cow ribeye shankle pig beef ribs pork belly meatloaf pork chop landjaeger. Filet mignon landjaeger jerky bacon shoulder andouille, tongue kevin chicken tenderloin ball tip rump leberkas pastrami. Beef ribs cow landjaeger drumstick.
+{% image "src/images/fumbly-diddle-logo-300.png", "Fumbly Diddle Logo", "image-full" %}
 
-Meatball tenderloin strip steak doner picanha leberkas burgdoggen turducken. Jerky doner frankfurter brisket meatloaf chuck. Short loin prosciutto capicola jerky pork chop ground round sausage turducken ribeye shank short ribs biltong beef ribs. Beef ribs biltong boudin flank pig. Picanha short ribs filet mignon sirloin. Ribeye jowl jerky pancetta ham, pig shank tri-tip hamburger flank brisket swine buffalo short ribs pork belly. Beef short loin frankfurter jowl shank bacon filet mignon pork loin.
+During the COVID Pandemic, I created a couple of mobile apps and published them in the app stores. None of them did very well, so I recently pulled them down. When I published the apps, I needed a company name to publish them under, so Fumbly Diddle Software was born. 
 
-Kielbasa ham chuck swine, kevin bresaola buffalo cupim pork chop venison. Swine ham hock kevin pork belly. Kielbasa tri-tip chislic pastrami shoulder brisket capicola swine cow pig. Meatball andouille pancetta shankle hamburger kielbasa leberkas bacon spare ribs corned beef pig bresaola doner. Chislic picanha salami boudin ham hock.
+The name for the company came from one of my favorite Science Fiction writers: Poul Anderson. Some of the first adult fiction books I read were Anderson's and whenever I see one I've not read yet, I pick it up. I don't remember what the book was, but I do remember that in the book Anderson wrote about a character 'fumbly diddling around.' The phrase stuck with me and that's how this software company got its name.
 
-Filet mignon sausage pig ball tip. Jerky meatball pork belly landjaeger, boudin picanha sausage tenderloin flank tail spare ribs andouille venison. Beef landjaeger burgdoggen pork belly, cupim tail boudin ham hock turkey ball tip kielbasa. Hamburger drumstick bresaola ball tip brisket buffalo ground round biltong turducken beef alcatra t-bone. Meatball swine chicken meatloaf ham ham hock. Rump shoulder short ribs meatloaf porchetta, leberkas shank.
+At about the same time, I started working on a few hardware projects, stuff for hobbyists creating microcontroller-based electronics projects and even a stand-alone hardware project. I created an LLC to bring these products to market and called the company [Fumbly Stuff, LLC](https://fumblystuff.com){target="_blank"}. With that in place, Fumbly Diddle became the software division of Fumbly Stuff, LLC.
+
+I hope you enjoy our products.
