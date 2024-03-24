@@ -30,3 +30,5 @@ Next, the application prompts you to select the target folder for the generated 
 When restoring the path from a backup file, the process is the same; first you select the backup file type you want to restore then select the backup file to restore. The system automates restoring all of the path settings from the backup, overwriting existing settings.
 
 The application also supports automated backup operation, allowing you to setup an application shortcut with your backup strategy's default settings, simply double-click the shortcut, answer Window's default security prompt, then the application creates the backup automatically using a generated backup file name.
+
+Go to the [Product Documentation](https://docs.fumblydiddle.com/pathbackup/){target="_blank"}.
