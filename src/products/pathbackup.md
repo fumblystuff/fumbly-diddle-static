@@ -5,10 +5,28 @@ platform:
   - Windows
 ---
 
-**Coming Soon** to the Windows App Store
+**Coming Soon** to the [Windows App Store](https://apps.microsoft.com/home){target="_blank"}.
 
-Bacon ipsum dolor amet pork chop doner kevin turducken, shoulder beef strip steak jowl filet mignon venison short ribs bresaola jerky frankfurter. Hamburger ham hock burgdoggen pork chicken, drumstick meatloaf cupim kevin spare ribs shank. Bresaola prosciutto salami chicken tenderloin. Frankfurter alcatra short ribs, short loin shankle strip steak pastrami jowl burgdoggen salami swine brisket.
+Windows application installations modify your system's System Path and User Path variables, adding entries that allows the system to quickly find application executables when typed on a command line or launched arbitrarily from an application. Sometimes these processes corrupt your system's path removes your ability to get things done.
 
-Fatback pig tenderloin, hamburger spare ribs tongue kevin pork chop doner cupim ribeye tri-tip pancetta picanha bacon. Hamburger bresaola prosciutto, turducken tenderloin salami pork chop tri-tip. Short loin prosciutto capicola swine, rump short ribs ham hock. Drumstick tongue ribeye, pork loin jowl buffalo pancetta chislic corned beef alcatra bresaola sausage ham hock pork. Short ribs filet mignon shank porchetta.
+The **Path Backup & Restore** application allows you to quickly backup your system's path to a local file the restore the path using a backup file later. The application supports backing up the system's path to:
 
-Filet mignon rump swine kevin tri-tip. Leberkas salami spare ribs bresaola meatball buffalo. Doner ham hock turkey bresaola landjaeger tenderloin spare ribs short ribs, tri-tip pork chop. Boudin t-bone capicola short loin. Burgdoggen buffalo shank andouille. Tongue rump cow bresaola, shankle turkey short ribs pork chop beef corned beef pork loin doner porchetta. Shank meatloaf drumstick tenderloin spare ribs jerky ball tip hamburger biltong doner shoulder tail venison prosciutto boudin.
++ Registry file (.reg)
++ JSON file (.json)
++ YAML file (.yaml)
+
+When launched, the application displays the following screen:
+
+{% image "src/images/pathbackup/app-home.png", "Path Backup home screen", "image-full" %}
+
+Click the **Backup** button to back up the system path and the **Restore** to restore the system path from a backup file. 
+
+When you click either button, the application prompts you to select the file type for the backup or restore operation as shown in the following figure:
+
+{% image "src/images/pathbackup/backup-choices.png", "Path Backup options", "image-full" %}
+
+Next, the application prompts you to select the target folder for the generated file. 
+
+When restoring the path from a backup file, the process is the same; first you select the backup file type you want to restore then select the backup file to restore. The system automates restoring all of the path settings from the backup, overwriting existing settings.
+
+The application also supports automated backup operation, allowing you to setup an application shortcut with your backup strategy's default settings, simply double-click the shortcut, answer Window's default security prompt, then the application creates the backup automatically using a generated backup file name.

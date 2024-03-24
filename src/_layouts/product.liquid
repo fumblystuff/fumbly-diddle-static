@@ -24,10 +24,7 @@ layout: base
 									<h4><a style="cursor: pointer" href="{{product.url}}">{{ product.data.title }}</a></h4>
 									{% for plat in platform %}									
 										{{ plat }}{%- unless forloop.last %},{% endunless %}
-									{% endfor %}
-									{% comment %} {%- if product.data.description %}
-									<p>{{ product.data.description }}</p>
-									{%- endif %} {% endcomment %}
+									{% endfor %}									
 								</li>
 								{%- endfor %}
 							</ul>
@@ -41,7 +38,7 @@ layout: base
 				<div class="col-8 col-12-medium imp-medium">
 					<section id="content">						
 						<h3>{{title}}</h3>						
-						<strong>Platforms:</strong>
+						<strong>Platform{%- if platform.length > 1 %}s{% endif %}:</strong>
 						{% for plat in platform %}
 							{% comment %} <a href="/platform/{{ plat | slugify }}">{{ plat }}</a> {% endcomment %}
 							{{ plat }}
