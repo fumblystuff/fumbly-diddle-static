@@ -4,7 +4,7 @@ module.exports = {
   eleventyComputed: {
     eleventyNavigation: {
       url: (data) => {
-        const productCollection = data.collections.product;
+        const productCollection = data.collections.productList;
         if (productCollection.length > 0) {
           return productCollection[0].page.url;
         }
