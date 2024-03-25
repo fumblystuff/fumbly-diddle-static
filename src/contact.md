@@ -2,9 +2,9 @@
 title: Contact
 layout: default
 eleventyNavigation:
-key: Contact
-parent: About
-order: 1
+  key: Contact
+  parent: About
+  order: 1
 ---
 
 <div id="formkeep-embed" data-formkeep-url="https://formkeep.com/p/3e1a4d278b20f455db7453190c086962?embedded=1"></div>
