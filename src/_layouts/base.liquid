@@ -15,10 +15,11 @@ shortTitle: Fumbly Diddle
   <title>{%- if page.url == '/' %}{{siteTitle}}{% else %}{{ shortTitle }}: {{title}}{%- endif %}</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <meta description="The internet home for Fumbly Diddle Software; we make apps" />
+  <meta description="The internet home for Fumbly Diddle Software; we make apps." />
 	<meta keywords="Fumbly Diddle, Fumbly Diddle Software" />
   <link rel="manifest" href="/manifest.json">
   <link rel="stylesheet" href="{{ "/" | htmlBaseUrl }}assets/css/main.css" />
+  <link rel="stylesheet" href="{{ "/" | htmlBaseUrl }}assets/css/scott.css" />
   {% include 'icons.html' %}
   {% include 'google-analytics.html' %}
 </head>
