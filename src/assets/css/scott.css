@@ -6,7 +6,7 @@ header img {
   top: 1.5px;
 }
 
-header h1 {
+#header h1 {
   position: relative;
   top: -3.5rem;
   left: 3rem;
