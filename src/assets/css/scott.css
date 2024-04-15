@@ -11,3 +11,7 @@ header img {
   top: -3.5rem;
   left: 3rem;
 }
+
+.image-full {
+  max-width: 100%;
+}
