@@ -7,6 +7,8 @@ platform:
 
 Windows application installations modify your system's System Path and User Path variables, adding entries that allows the system to quickly find application executables when typed on a command line or launched arbitrarily from an application. Sometimes these processes corrupt your system's path removes your ability to get things done.
 
+[Download Now!](https://fumblydiddle.b-cdn.net/pathbackup/PathBackupSetup-0.1.1.exe){target="_blank"}.
+
 The **Path Backup & Restore** application allows you to quickly backup your system's path to a local file the restore the path using a backup file later. The application supports backing up the system's path to:
 
 + Registry file (.reg)
