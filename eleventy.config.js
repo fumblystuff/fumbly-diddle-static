@@ -42,6 +42,15 @@ module.exports = eleventyConfig => {
       .sort((a, b) => a.data.title.localeCompare(b.data.title))
   });
 
+  eleventyConfig.addCollection("newsByTimestamp", collectionAPI => {
+		return collectionAPI.getFilteredByTag("news").sort((a, b) => {
+			// use the timestamp if we have it, otherwise date
+			var aDate = new Date(a.data.timestamp);
+			var bDate = new Date(b.data.timestamp);
+			return aDate - bDate;
+		});
+	});
+
   eleventyConfig.addShortcode("GetKeywords", function (categories) {
     return categories.join(", ");
   });
@@ -102,6 +111,21 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter("truncate", function (num) {
     return Math.trunc(num);
   });
+
+  eleventyConfig.addFilter("readableTimestamp", function (dateVal, locale = "en-us") {
+		// Used by home, articles, & post pages to render timestamp as human readable
+		var theDate = new Date(dateVal);
+		const options = {
+			weekday: 'long',
+			year: 'numeric',
+			month: 'long',
+			day: 'numeric',
+			hour12: true,
+			hour: '2-digit',
+			minute: '2-digit'
+		};
+		return theDate.toLocaleString(locale, options);
+	});
 
   // https://www.lenesaile.com/en/blog/organizing-the-eleventy-config-file/
   // Copy the favicon files to the root folder

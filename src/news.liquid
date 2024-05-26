@@ -1,24 +1,28 @@
 ---
 title: News
 layout: default
+pagination:
+  data: collections.newsByTimestamp
+  size: 10
+  alias: newsItems
+  reverse: true 
 eleventyNavigation:
   key: News
   order: 8
 ---
 
-{% assign newsItems = collections.news %}
 {%- if newsItems.length > 0 %}
+  {% include 'pagination-count.html' %}
   <ul class="alt">
-    {%- for news in newsItems %}
+    {%- for newsItem in newsItems %}
     <li>
-      <h4><a style="cursor: pointer" href="{{news.url}}">{{ news.data.title }}</a></h4>
-      <strong>Date: </strong>{{ news.date | readableDate }}
-      {%- if news.data.description %}
-        <p>{{ news.data.description }}</p>
-      {%- endif %}
+      <h4><a style="cursor: pointer" href="{{newsItem.url}}">{{ newsItem.data.title }}</a></h4>
+      <strong>Date: </strong>{{ newsItem.data.timestamp | readableTimestamp }}
+      <p>{{ newsItem.templateContent  }}</p>
     </li>
     {%- endfor %}
   </ul>
+  {% include 'pagination-nav.html' %}
 {%- else %}
   <p>No News Items found, please try again later.</p>
 {%- endif %}

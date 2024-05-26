@@ -7,7 +7,7 @@ platform:
 
 Windows application installations modify your system's System Path and User Path variables, adding entries that allows the system to quickly find application executables when typed on a command line or launched arbitrarily from an application. Sometimes these processes corrupt your system's path removes your ability to get things done.
 
-[Download Now!](https://fumblydiddle.b-cdn.net/pathbackup/PathBackupSetup-0.1.1.exe){target="_blank"}.
+<a href="https://fumblydiddle.b-cdn.net/pathbackup/PathBackupSetup-0.1.1.exe" class="button primary small" target="_blank">Download Now</a>
 
 The **Path Backup & Restore** application allows you to quickly backup your system's path to a local file the restore the path using a backup file later. The application supports backing up the system's path to:
 
@@ -31,6 +31,6 @@ When restoring the path from a backup file, the process is the same; first you s
 
 The application also supports automated backup operation, allowing you to setup an application shortcut with your backup strategy's default settings, simply double-click the shortcut, answer Window's default security prompt, then the application creates the backup automatically using a generated backup file name.
 
-[Download Now!](https://fumblydiddle.b-cdn.net/pathbackup/PathBackupSetup-0.1.1.exe){target="_blank"}.
+<a href="https://fumblydiddle.b-cdn.net/pathbackup/PathBackupSetup-0.1.1.exe" class="button primary small" target="_blank">Download Now</a>
 
 Go to the [Product Documentation](https://docs.fumblydiddle.com/pathbackup/){target="_blank"}.
