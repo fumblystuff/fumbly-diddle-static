@@ -5,7 +5,7 @@ platform:
   - Windows
 ---
 
-Windows application installations modify your system's System Path and User Path variables, adding entries that allows the system to quickly find application executables when typed on a command line or launched arbitrarily from an application. Sometimes these processes corrupt your system's path removes your ability to get things done.
+Windows application installations modify your system's System Path and User Path variables, adding entries that allows the system to quickly find application executables when typed on a command line or launched arbitrarily from an application. Sometimes these processes corrupt your system's path which removes your ability to get things done.
 
 <a href="https://fumblydiddle.b-cdn.net/pathbackup/PathBackupSetup-0.1.1.exe" class="button primary small" target="_blank">Download Now</a>
 
