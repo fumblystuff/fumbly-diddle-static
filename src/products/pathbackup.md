@@ -37,4 +37,4 @@ Go to the [Product Documentation](https://docs.fumblydiddle.com/pathbackup/){tar
 
 ## Releases
 
-{% downloadLinks "PathBackup" %} 
+{% downloadTable "PathBackup" %}
