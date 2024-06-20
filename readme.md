@@ -15,9 +15,11 @@ The pub web site for Fumbly Diddle Software, built using the [Eleventy](https://
 - [x] Manifest
 - [x] Add the platform list to the top of the product listing
 - [x] Add platform list for each product to the Products page
-- [ ] Logo on the menu bar
-- [ ] About page content
-- [ ] Path Backup page content
+- [x] Logo on the menu bar
+- [x] About page content
+- [x] Path Backup page content
+- [x] Make short code for download button, pull installer URL from data file.
+- [ ] Make downloads list component for all download links
 - [ ] Implement image extension
 - [ ] Add error graphic to 404 page
 - [ ] Add Platforms pages

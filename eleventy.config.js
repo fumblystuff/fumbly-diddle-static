@@ -8,6 +8,8 @@ const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const embedYouTube = require('eleventy-plugin-youtube-embed');
 const pluginImages = require("./eleventy.config.images.js");
 
+const linkData = require('./src/_data/linkdata.js');
+
 // Transforms
 // https://learneleventyfromscratch.com/lesson/31.html#minifying-html-output
 const htmlMinTransform = require('./src/transforms/html-min.js');
@@ -37,19 +39,19 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.setLibrary("md", markdownLib);
 
-    eleventyConfig.addCollection('productList', function (collection) {
+  eleventyConfig.addCollection('productList', function (collection) {
     return collection.getFilteredByGlob("src/products/**/*.md")
       .sort((a, b) => a.data.title.localeCompare(b.data.title))
   });
 
   eleventyConfig.addCollection("newsByTimestamp", collectionAPI => {
-		return collectionAPI.getFilteredByTag("news").sort((a, b) => {
-			// use the timestamp if we have it, otherwise date
-			var aDate = new Date(a.data.timestamp);
-			var bDate = new Date(b.data.timestamp);
-			return aDate - bDate;
-		});
-	});
+    return collectionAPI.getFilteredByTag("news").sort((a, b) => {
+      // use the timestamp if we have it, otherwise date
+      var aDate = new Date(a.data.timestamp);
+      var bDate = new Date(b.data.timestamp);
+      return aDate - bDate;
+    });
+  });
 
   eleventyConfig.addShortcode("GetKeywords", function (categories) {
     return categories.join(", ");
@@ -83,6 +85,14 @@ module.exports = eleventyConfig => {
     return noContent;
   }
 
+  eleventyConfig.addShortcode("downloadLink", function (productKey, linkText) {
+    return `<a href="${linkData[productKey][0].installerURL}" target="_blank">${linkText}</a>`;
+  });
+
+  eleventyConfig.addShortcode("downloadButton", function (productKey, buttonText) {
+    return `<a href="${linkData[productKey][0].installerURL}" class="button primary small" target="_blank">${buttonText}</a>`;
+  });
+
   // https://www.raymondcamden.com/2020/06/24/adding-algolia-search-to-eleventy-and-netlify
   // Remove <code>.*</code>, remove HTML, then with plain text, limit to 5k chars
   eleventyConfig.addFilter('algExcerpt', function (text) {
@@ -113,19 +123,19 @@ module.exports = eleventyConfig => {
   });
 
   eleventyConfig.addFilter("readableTimestamp", function (dateVal, locale = "en-us") {
-		// Used by home, articles, & post pages to render timestamp as human readable
-		var theDate = new Date(dateVal);
-		const options = {
-			weekday: 'long',
-			year: 'numeric',
-			month: 'long',
-			day: 'numeric',
-			hour12: true,
-			hour: '2-digit',
-			minute: '2-digit'
-		};
-		return theDate.toLocaleString(locale, options);
-	});
+    // Used by home, articles, & post pages to render timestamp as human readable
+    var theDate = new Date(dateVal);
+    const options = {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour12: true,
+      hour: '2-digit',
+      minute: '2-digit'
+    };
+    return theDate.toLocaleString(locale, options);
+  });
 
   // https://www.lenesaile.com/en/blog/organizing-the-eleventy-config-file/
   // Copy the favicon files to the root folder
