@@ -89,6 +89,15 @@ module.exports = eleventyConfig => {
     return `<a href="${linkData[productKey][0].installerURL}" target="_blank">${linkText}</a>`;
   });
 
+  eleventyConfig.addShortcode("downloadLinks", function (productKey) {    
+    var res = "<ul>";
+    linkData[productKey].map((link) => {
+      var releaseDate = new Date(link.date);
+      res += `<li><a href="${link.installerURL}" target="_blank">${link.version} ${link.note} (${releaseDate.toLocaleDateString()})</a></li>`;
+    });
+    return res + "</ul>";
+  });
+
   eleventyConfig.addShortcode("downloadButton", function (productKey, buttonText) {
     return `<a href="${linkData[productKey][0].installerURL}" class="button primary small" target="_blank">${buttonText}</a>`;
   });

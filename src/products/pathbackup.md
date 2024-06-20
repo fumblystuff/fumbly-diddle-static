@@ -34,3 +34,7 @@ The application also supports automated backup operation, allowing you to setup 
 {% downloadButton "PathBackup" "Download Now" %}
 
 Go to the [Product Documentation](https://docs.fumblydiddle.com/pathbackup/){target="_blank"}.
+
+## Releases
+
+{% downloadLinks "PathBackup" %} 
