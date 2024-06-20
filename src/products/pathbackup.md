@@ -9,7 +9,7 @@ Windows application installations modify your system's System Path and User Path
 
 <a href="https://fumblydiddle.b-cdn.net/pathbackup/PathBackupSetup-0.1.1.exe" class="button primary small" target="_blank">Download Now</a>
 
-The **Path Backup & Restore** application allows you to quickly backup your system's path to a local file the restore the path using a backup file later. The application supports backing up the system's path to:
+The **Path Backup & Restore** application allows you to quickly backup your system's path to a local file then restore the path using a backup file later. The application supports backing up the system's path to:
 
 + Registry file (.reg)
 + JSON file (.json)
