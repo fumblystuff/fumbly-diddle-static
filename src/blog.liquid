@@ -1,0 +1,31 @@
+---
+title: Fumbly Diddle Blog
+layout: default
+pagination:
+  data: collections.post
+  size: 10
+  alias: posts
+  reverse: true
+eleventyNavigation:
+  key: Blog
+  order: 8
+---
+  
+{%- if posts.length > 0 %}
+{% include 'pagination-count.html' %}
+<ul class="alt">
+  {%- for post in posts %}
+  <li>
+    <h4><a style="cursor: pointer" href="{{post.url}}">{{ post.data.title }}</a></h4>
+    <strong>Date:</strong> {{ post.data.timestamp | readableTimestamp }}
+    {% comment %} {%- if post.data.description %}
+    <p>{{ post.data.description }}</p>
+    {%- endif %} {% endcomment %}
+    <p>{{ post.templateContent }}</p>
+  </li>
+  {%- endfor %}
+</ul>
+{% include 'pagination-nav.html' %}
+{%- else %}
+<p>No posts available, please try again later.</p>
+{%- endif %}

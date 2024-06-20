@@ -6,7 +6,7 @@ layout: default
 {% assign nextPost = collections.post | getNextCollectionItem %}
 {% include 'pretty-print.html' %}
 
-<p><strong>Posted:</strong> {{ date | readableDate }}</p>
+<p><strong>Posted:</strong> {{ timestamp | readableTimestamp }}</p>
 
 {{ content }}
 
