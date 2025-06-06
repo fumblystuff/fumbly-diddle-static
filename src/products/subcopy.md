@@ -7,6 +7,8 @@ platform:
 
 The Subdirectory Copy (SubCopy) application copies a subset of a directory's subdirectories to a removable drive (flash drive). 
 
+{% downloadButton "SubCopy" "Download Now" %}
+
 For example, if you have a Music directory on your computer organized by artist and album (the way iTunes organizes them) and you want to copy only a subset of those artists to a flash drive. If that's your use case, then this is the utility for you. We built this utility for that specific use case, but we assume there are other use cases this utility handles as well. 
 
 > Many modern automobiles allow owners to plug in an SD Memory card or flash drive full of music files and play them on the car's audio system. These cars often have restrictions on the size of the memory device and/or the maximum number of files you can serve from the device. For this reason, you may not be able to put all of your music files on the drive, so this application allows you to take just a subset with you when you travel.
