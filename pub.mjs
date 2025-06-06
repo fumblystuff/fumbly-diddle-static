@@ -1,13 +1,5 @@
 #!/usr/bin/env zx
 
-// const algoliaPrefix = 'JMW_';
-
-// With ZX the first three commands are the node executable, the zx executable, and the script name
-// [
-//   'C:\\Program Files\\nodejs\\node.exe',
-//   'C:\\Users\\john\\AppData\\Roaming\\npm\\node_modules\\zx\\build\\cli.js',
-//   'pub.mjs'
-// ]
 var theArgs = process.argv.slice(3);
 var updatePackage = false;
 var updateIndex = false;
@@ -62,7 +54,7 @@ console.log();
 await $`gen-build-info src/_data`;
 
 console.log('\nBuilding site');
-await $`eleventy`;
+await $`npm run build`;
 
 // if (updateIndex) {
 //   console.log('\nUpdating Algolia Index');

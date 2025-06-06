@@ -16,5 +16,13 @@ module.exports = {
       date: "2024-03-30",
       note: "Initial release"
     }
+  ],
+  SubCopy: [
+    {
+      version: "1.0.8",
+      installerURL: "https://fumblydiddle.b-cdn.net/subcopy/SubCopySetup-1.0.8.exe",
+      date: "2025-06-06",
+      note: "First release"
+    }
   ]
 }
