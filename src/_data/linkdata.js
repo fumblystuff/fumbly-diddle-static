@@ -21,7 +21,7 @@ module.exports = {
     {
       version: "1.1.1.0",
       installerURL: "https://fumblydiddle.b-cdn.net/subcopy/SubCopySetup-1.1.1.exe",
-      date: "2025-06-15",
+      date: "2025-06-14",
       note: "Added support for projects"
     }, {
       version: "1.0.8",
