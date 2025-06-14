@@ -23,6 +23,8 @@ Next, click the **Start** button and configure the copy operation.
 
 {% image "src/images/subcopy/subcopy-2.png", "Subdirectory Copy application Copy configuration", "image-full" %}
 
+Access the full application source on GitHub at [subdirectory-copy](https://github.com/fumblystuff/subdirectory-copy){target="_blank"}.
+
 **Note:** The application uses the free [Teracopy](https://www.codesector.com/teracopy) utility to manage the copy process; so you must have TeraCopy installed to use this application. If you find you like the capabilities TeraCopy provides, please consider buying a license.
 
 {% downloadButton "SubCopy" "Download Now" %}
