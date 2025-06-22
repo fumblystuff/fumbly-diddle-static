@@ -19,6 +19,11 @@ module.exports = {
   ],
   SubCopy: [
     {
+      version: "1.1.2.0",
+      installerURL: "https://fumblydiddle.b-cdn.net/subcopy/SubCopySetup-1.1.1.1.exe",
+      date: "2025-06-22",
+      note: "Added support for command-line arguments and launching a single instance only."
+    },    {
       version: "1.1.1.1",
       installerURL: "https://fumblydiddle.b-cdn.net/subcopy/SubCopySetup-1.1.1.1.exe",
       date: "2025-06-14",
