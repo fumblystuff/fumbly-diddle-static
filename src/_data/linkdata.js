@@ -1,7 +1,7 @@
 module.exports = [
   {
-    "name": "PathBackup",
-    "releases": [
+    name: "Path Backup",
+    releases: [
       {
         version: "0.1.5",
         installerURL: "https://fumblydiddle.b-cdn.net/pathbackup/PathBackupSetup-0.1.5.exe",
@@ -20,8 +20,8 @@ module.exports = [
       }
     ]
   }, {
-    "name": "SubCopy",
-    "releases": [
+    name: "Subdirectory Copy",
+    releases: [
       {
         version: "1.1.2.0",
         installerURL: "https://fumblydiddle.b-cdn.net/subcopy/SubCopySetup-1.1.1.1.exe",
@@ -40,13 +40,13 @@ module.exports = [
       }
     ]
   }, {
-    "name": "TimestampNow",
-    "releases": [
+    name: "Timestamp Now",
+    releases: [
       {
-        version: "1.1.2.0",
-        installerURL: "https://fumblydiddle.b-cdn.net/subcopy/SubCopySetup-1.1.1.1.exe",
-        date: "2025-06-22",
-        note: "Added support for command-line arguments and launching a single instance only."
+        version: "1.0.0",
+        installerURL: "https://fumblydiddle.b-cdn.net/pathbackup/PathBackupSetup-0.1.5.exe",
+        date: "2025-06-28",
+        note: "Initial release"
       }
     ]
   }
