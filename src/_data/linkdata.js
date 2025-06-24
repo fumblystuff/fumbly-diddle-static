@@ -17,6 +17,14 @@ module.exports = {
       note: "Initial release"
     }
   ],
+  TimestampNow: [
+    {
+      version: "1.0.0",
+      installerURL: "https://fumblydiddle.b-cdn.net/pathbackup/PathBackupSetup-0.1.5.exe",
+      date: "2025-06-28",
+      note: "Initial release"
+    }
+  ],
   SubCopy: [
     {
       version: "1.1.2.0",

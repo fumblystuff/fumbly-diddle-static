@@ -7,7 +7,7 @@ platform:
 
 The Subdirectory Copy (SubCopy) application copies a subset of a directory's subdirectories to a removable drive (flash drive). 
 
-{% downloadButton "SubCopy" "Download Now" %}
+{% downloadButton "SubCopy" "Free Download" %}
 
 For example, if you have a Music directory on your computer organized by artist and album (the way iTunes organizes them) and you want to copy only a subset of those artists to a flash drive. If that's your use case, then this is the utility for you. We built this utility for that specific use case, but we assume there are other use cases this utility handles as well. 
 
@@ -27,7 +27,7 @@ Access the full application source on GitHub at [subdirectory-copy](https://gith
 
 **Note:** The application uses the free [Teracopy](https://www.codesector.com/teracopy) utility to manage the copy process; so you must have TeraCopy installed to use this application. If you find you like the capabilities TeraCopy provides, please consider buying a license.
 
-{% downloadButton "SubCopy" "Download Now" %}
+{% downloadButton "SubCopy" "Free Download" %}
 
 Go to the [Product Documentation](https://docs.fumblydiddle.com/subcopy/){target="_blank"}.
 
