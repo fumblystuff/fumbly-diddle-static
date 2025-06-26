@@ -3,7 +3,7 @@ title: About
 layout: default
 eleventyNavigation:
   key: About
-  order: 9
+  order: 8
 ---
 
 {% image "src/images/fumbly-diddle-logo-300.png", "Fumbly Diddle Logo", "image-full" %}
