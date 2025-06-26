@@ -92,32 +92,16 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.addShortcode("downloadLinks", function (productKey) {
     var res = "<ul>";
-    // linkData[productKey].map((link) => {
-    //   var releaseDate = new Date(link.date);
-    //   res += `<li><a href="${link.installerURL}" target="_blank">${link.version} ${link.note} (${releaseDate.toLocaleDateString()})</a></li>`;
-    // });
+    linkData[productKey].map((link) => {
+      var releaseDate = new Date(link.date);
+      res += `<li><a href="${link.installerURL}" target="_blank">${link.version} ${link.note} (${releaseDate.toLocaleDateString()})</a></li>`;
+    });
     return res + "</ul>";
   });
 
-  // eleventyConfig.addShortcode("downloadTable", function (productKey) {
-  //   var res = `<div class="table-wrapper"><table class="alt"><thead><tr><th>Version</th><th>Release Date</th><th>Notes</th></tr></thead><tbody>`;
-  //   linkData[productKey].map((link) => {
-  //     var releaseDate = new Date(link.date);
-  //     res += "<tr>";
-  //     res += `<td><a href="${link.installerURL}" target="_blank">${link.version}</a></td>`;
-  //     res += `<td>${releaseDate.toLocaleDateString()}</td>`;
-  //     res += `<td>${link.note}</td>`;
-  //     res += "</tr>";
-  //   });
-  //   return res + "</tbody></table></div>";
-  // });
-
   eleventyConfig.addShortcode("downloadTable", function (productKey) {
-    // get the product object from linkdata.js
-    const productObject = linkdata.find(item => item.name === productKey);
-    // now build the table
     var res = `<div class="table-wrapper"><table class="alt"><thead><tr><th>Version</th><th>Release Date</th><th>Notes</th></tr></thead><tbody>`;
-    linkData[productObject.releases].map((link) => {
+    linkData[productKey].map((link) => {
       var releaseDate = new Date(link.date);
       res += "<tr>";
       res += `<td><a href="${link.installerURL}" target="_blank">${link.version}</a></td>`;
