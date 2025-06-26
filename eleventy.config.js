@@ -86,12 +86,15 @@ module.exports = eleventyConfig => {
   }
 
   eleventyConfig.addShortcode("downloadLink", function (productKey, linkText) {
-    return `<a href="${linkData[productKey][0].installerURL}" target="_blank">${linkText}</a>`;
+    // return `<a href="${linkData[productKey][0].installerURL}" target="_blank">${linkText}</a>`;
+    return 'test';
   });
 
   eleventyConfig.addShortcode("downloadLinks", function (productKey) {
+    var releases = linkData[productKey].releases;
     var res = "<ul>";
-    linkData[productKey].map((link) => {
+    releases.map((link) => {
+    // linkData[productKey].map((link) => {
       var releaseDate = new Date(link.date);
       res += `<li><a href="${link.installerURL}" target="_blank">${link.version} ${link.note} (${releaseDate.toLocaleDateString()})</a></li>`;
     });
@@ -100,7 +103,9 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.addShortcode("downloadTable", function (productKey) {
     var res = `<div class="table-wrapper"><table class="alt"><thead><tr><th>Version</th><th>Release Date</th><th>Notes</th></tr></thead><tbody>`;
-    linkData[productKey].map((link) => {
+
+    var releases = linkData[productKey].releases;
+    releases.map((link) => {
       var releaseDate = new Date(link.date);
       res += "<tr>";
       res += `<td><a href="${link.installerURL}" target="_blank">${link.version}</a></td>`;
@@ -112,7 +117,8 @@ module.exports = eleventyConfig => {
   });
 
   eleventyConfig.addShortcode("downloadButton", function (productKey, buttonText) {
-    return `<a href="${linkData[productKey][0].installerURL}" class="button primary small" target="_blank">${buttonText}</a>`;
+    var releases = linkData[productKey].releases;
+    return `<a href="${releases[0].installerURL}" class="button primary small" target="_blank">${buttonText}</a>`;
   });
 
   // https://www.raymondcamden.com/2020/06/24/adding-algolia-search-to-eleventy-and-netlify
