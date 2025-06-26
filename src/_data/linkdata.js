@@ -50,11 +50,6 @@ module.exports = [
         installerURL: "https://fumblydiddle.b-cdn.net/pathbackup/TimestampNowSetup-0.1.5.exe",
         date: "2025-06-28",
         note: "Initial release"
-      }, {
-        version: "1.0.0",
-        installerURL: "https://fumblydiddle.b-cdn.net/pathbackup/TimestampNowSetup-0.1.5.exe",
-        date: "2025-06-28",
-        note: "Initial release"
       }
     ]
   }
