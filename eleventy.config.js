@@ -86,15 +86,16 @@ module.exports = eleventyConfig => {
   }
 
   eleventyConfig.addShortcode("downloadLink", function (productKey, linkText) {
-    // return `<a href="${linkData[productKey][0].installerURL}" target="_blank">${linkText}</a>`;
-    return 'test';
+    const product = linkData.find(prod => prod.shortName === productKey);
+    const releases = product.releases;
+    return `<a href="${releases[0].installerURL}" target="_blank">${linkText}</a>`;
   });
 
   eleventyConfig.addShortcode("downloadLinks", function (productKey) {
-    var releases = linkData[productKey].releases;
+    const product = linkData.find(prod => prod.shortName === productKey);
+    const releases = product.releases;
     var res = "<ul>";
     releases.map((link) => {
-    // linkData[productKey].map((link) => {
       var releaseDate = new Date(link.date);
       res += `<li><a href="${link.installerURL}" target="_blank">${link.version} ${link.note} (${releaseDate.toLocaleDateString()})</a></li>`;
     });
@@ -102,12 +103,15 @@ module.exports = eleventyConfig => {
   });
 
   eleventyConfig.addShortcode("downloadTable", function (productKey, doHeader = false) {
+    const product = linkData.find(prod => prod.shortName === productKey);
+    const releases = product.releases;
+    console.log(`\n${productKey} releases:`);
+    // console.dir(releases);
     var res = '';
     if (doHeader) {
-      res += `<h2>${linkData[productKey].name}</h2>`;
+      res += `<h2>${product.name}</h2>`;
     }
     res += `<div class="table-wrapper"><table class="alt"><thead><tr><th>Version</th><th>Release Date</th><th>Notes</th></tr></thead><tbody>`;
-    var releases = linkData[productKey].releases;    
     releases.map((link) => {
       var releaseDate = new Date(link.date);
       res += "<tr>";
@@ -116,11 +120,14 @@ module.exports = eleventyConfig => {
       res += `<td>${link.note}</td>`;
       res += "</tr>";
     });
-    return res + "</tbody></table></div>";
+    res += "</tbody></table></div>"
+    console.log(res);
+    return res;
   });
 
   eleventyConfig.addShortcode("downloadButton", function (productKey, buttonText) {
-    var releases = linkData[productKey].releases;
+    const product = linkData.find(prod => prod.shortName === productKey);
+    const releases = product.releases;
     return `<a href="${releases[0].installerURL}" class="button primary small" target="_blank">${buttonText}</a>`;
   });
 

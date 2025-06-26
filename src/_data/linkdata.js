@@ -1,6 +1,7 @@
-module.exports = {
-  PathBackup: {
+module.exports = [
+  {
     name: "Path Backup",
+    shortName: "PathBackup",
     releases: [
       {
         version: "0.1.5",
@@ -19,9 +20,9 @@ module.exports = {
         note: "Initial release"
       }
     ]
-  },
-  SubdirectoryCopy: {
+  }, {
     name: "Subdirectory Copy",
+    shortName: "SubdirectoryCopy",
     releases: [
       {
         version: "1.1.2.0",
@@ -40,11 +41,16 @@ module.exports = {
         note: "First release"
       }
     ]
-  },
-  TimestampNow: {
+  }, {
     name: "Timestamp Now",
+    shortName: "TimestampNow",
     releases: [
       {
+        version: "1.0.0",
+        installerURL: "https://fumblydiddle.b-cdn.net/pathbackup/TimestampNowSetup-0.1.5.exe",
+        date: "2025-06-28",
+        note: "Initial release"
+      }, {
         version: "1.0.0",
         installerURL: "https://fumblydiddle.b-cdn.net/pathbackup/TimestampNowSetup-0.1.5.exe",
         date: "2025-06-28",
@@ -52,4 +58,4 @@ module.exports = {
       }
     ]
   }
-}
+]
