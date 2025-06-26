@@ -101,10 +101,13 @@ module.exports = eleventyConfig => {
     return res + "</ul>";
   });
 
-  eleventyConfig.addShortcode("downloadTable", function (productKey) {
-    var res = `<div class="table-wrapper"><table class="alt"><thead><tr><th>Version</th><th>Release Date</th><th>Notes</th></tr></thead><tbody>`;
-
-    var releases = linkData[productKey].releases;
+  eleventyConfig.addShortcode("downloadTable", function (productKey, doHeader = false) {
+    var res = '';
+    if (doHeader) {
+      res += `<h2>${linkData[productKey].name}</h2>`;
+    }
+    res += `<div class="table-wrapper"><table class="alt"><thead><tr><th>Version</th><th>Release Date</th><th>Notes</th></tr></thead><tbody>`;
+    var releases = linkData[productKey].releases;    
     releases.map((link) => {
       var releaseDate = new Date(link.date);
       res += "<tr>";
