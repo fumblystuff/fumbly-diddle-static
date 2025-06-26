@@ -1,5 +1,5 @@
 module.exports = {
-  pathbackup: {
+  PathBackup: {
     name: "Path Backup",
     releases: [
       {
@@ -20,7 +20,7 @@ module.exports = {
       }
     ]
   },
-  subcopy: {
+  SubdirectoryCopy: {
     name: "Subdirectory Copy",
     releases: [
       {
@@ -41,12 +41,12 @@ module.exports = {
       }
     ]
   },
-  timestampnow: {
+  TimestampNow: {
     name: "Timestamp Now",
     releases: [
       {
         version: "1.0.0",
-        installerURL: "https://fumblydiddle.b-cdn.net/pathbackup/PathBackupSetup-0.1.5.exe",
+        installerURL: "https://fumblydiddle.b-cdn.net/pathbackup/TimestampNowSetup-0.1.5.exe",
         date: "2025-06-28",
         note: "Initial release"
       }
