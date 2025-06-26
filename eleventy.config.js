@@ -105,8 +105,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addShortcode("downloadTable", function (productKey, doHeader = false) {
     const product = linkData.find(prod => prod.shortName === productKey);
     const releases = product.releases;
-    console.log(`\n${productKey} releases:`);
-    // console.dir(releases);
+    console.log(`\n${productKey} releases:`);    
     var res = '';
     if (doHeader) {
       res += `<h2>${product.name}</h2>`;
