@@ -1,7 +1,6 @@
-module.exports = [
-  {
+module.exports = {
+  pathbackup: {
     name: "Path Backup",
-    shortcode: "pathbackup",
     releases: [
       {
         version: "0.1.5",
@@ -20,9 +19,9 @@ module.exports = [
         note: "Initial release"
       }
     ]
-  }, {
+  },
+  subcopy: {
     name: "Subdirectory Copy",
-    shortcode: "subcopy",
     releases: [
       {
         version: "1.1.2.0",
@@ -41,9 +40,9 @@ module.exports = [
         note: "First release"
       }
     ]
-  }, {
+  },
+  timestampnow: {
     name: "Timestamp Now",
-    shortcode: "timestampnow",
     releases: [
       {
         version: "1.0.0",
@@ -53,4 +52,4 @@ module.exports = [
       }
     ]
   }
-]
+}
