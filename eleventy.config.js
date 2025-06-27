@@ -8,7 +8,7 @@ const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const embedYouTube = require('eleventy-plugin-youtube-embed');
 const pluginImages = require("./eleventy.config.images.js");
 
-const linkData = require('./src/_data/linkdata.js');
+const productlinks = require('./src/_data/productlinks.js');
 
 // Transforms
 // https://learneleventyfromscratch.com/lesson/31.html#minifying-html-output
@@ -86,13 +86,13 @@ module.exports = eleventyConfig => {
   }
 
   eleventyConfig.addShortcode("downloadLink", function (productKey, linkText) {
-    const product = linkData.find(prod => prod.shortName === productKey);
+    const product = productlinks.find(prod => prod.shortname === productKey);
     const releases = product.releases;
     return `<a href="${releases[0].installerURL}" target="_blank">${linkText}</a>`;
   });
 
   eleventyConfig.addShortcode("downloadLinks", function (productKey) {
-    const product = linkData.find(prod => prod.shortName === productKey);
+    const product = productlinks.find(prod => prod.shortname === productKey);
     const releases = product.releases;
     var res = "<ul>";
     releases.map((link) => {
@@ -103,9 +103,13 @@ module.exports = eleventyConfig => {
   });
 
   eleventyConfig.addShortcode("downloadTable", function (productKey, doHeader = false) {
-    const product = linkData.find(prod => prod.shortName === productKey);
+    
+    const product = productlinks.find(prod => prod.shortname === productKey);
+    console.dir(product);
     const releases = product.releases;
-    console.log(`\n${productKey} releases:`);    
+    console.log(`\n"${productKey}" releases:`);
+    console.dir(releases);
+
     var res = '';
     if (doHeader) {
       res += `<h2>${product.name}</h2>`;
@@ -125,7 +129,7 @@ module.exports = eleventyConfig => {
   });
 
   eleventyConfig.addShortcode("downloadButton", function (productKey, buttonText) {
-    const product = linkData.find(prod => prod.shortName === productKey);
+    const product = productlinks.find(prod => prod.shortname === productKey);
     const releases = product.releases;
     return `<a href="${releases[0].installerURL}" class="button primary small" target="_blank">${buttonText}</a>`;
   });

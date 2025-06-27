@@ -4,12 +4,8 @@ layout: default
 eleventyNavigation:
   key: Downloads
   order: 3
----
+---`
 
-<p>Here are some links:</p>
-{% for prod in products %}
-  {% downloadTable "{{ prod.shortname }}" true %}
+{% for prod in productlinks %}
+<h2>{{ prod.shortname }}</h2>
 {% endfor %}
-<p>test</p>
-{% downloadTable "TimestampNow" true %}
-<p>All done!</p>

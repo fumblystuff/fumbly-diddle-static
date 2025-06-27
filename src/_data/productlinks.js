@@ -1,7 +1,7 @@
 module.exports = [
   {
     name: "Path Backup",
-    shortName: "PathBackup",
+    shortname: "PathBackup",
     releases: [
       {
         version: "0.1.5",
@@ -22,7 +22,7 @@ module.exports = [
     ]
   }, {
     name: "Subdirectory Copy",
-    shortName: "SubdirectoryCopy",
+    shortname: "SubdirectoryCopy",
     releases: [
       {
         version: "1.1.2.0",
@@ -43,7 +43,7 @@ module.exports = [
     ]
   }, {
     name: "Timestamp Now",
-    shortName: "TimestampNow",
+    shortname: "TimestampNow",
     releases: [
       {
         version: "1.0.0",
