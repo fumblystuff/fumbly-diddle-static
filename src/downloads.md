@@ -7,6 +7,6 @@ eleventyNavigation:
 ---
 
 {% for prod in productlinks %}
-<h2>{{ prod.shortname }}</h2>
-{% downloadTable "{{ prod.shortname }}" %}
+<h2>{{ prod.name }}</h2>
+{% downloadTable prod.shortname %}
 {% endfor %}
