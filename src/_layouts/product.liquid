@@ -9,26 +9,24 @@ layout: base
 	<section id="main" class="wrapper style1">
 		<header class="major">
 			<h2>Products</h2>
-		{% comment %} <p>Only one for now, but we have plans to publish more.</p> {% endcomment %}
 		</header>
 		<div class="container">
 			<div class="row gtr-150">
 				<div class="col-4 col-12-medium">
 					<section id="sidebar">
 						<section>
-							<h3>All Products</h3>
+							<h2>All Products</h2>
+							<hr />
 							{%- if products.length > 0 %}
 							<ul class="alt">
 								{%- for product in products %}
 								<li>
-									<h4><a style="cursor: pointer" href="{{product.url}}">{{ product.data.title }}</a></h4>
-									{% for plat in platform %}									
-										{{ plat }}{%- unless forloop.last %},{% endunless %}
-									{% endfor %}									
+									<h4>
+										<a style="cursor: pointer" href="{{product.url}}">{{ product.data.title }}</a>
+									</h4>
 								</li>
 								{%- endfor %}
 							</ul>
-							<p><em>More products coming</em></p>
 							{%- else %}
 							<p>No products found</p>
 							{%- endif %}
@@ -36,14 +34,12 @@ layout: base
 					</section>
 				</div>
 				<div class="col-8 col-12-medium imp-medium">
-					<section id="content">						
-						<h3>{{title}}</h3>						
+					<section id="content">
+						<h2>{{title}}</h2>
 						<strong>Platform{%- if platform.length > 1 %}s{% endif %}:</strong>
 						{% for plat in platform %}
-							{% comment %} <a href="/platform/{{ plat | slugify }}">{{ plat }}</a> {% endcomment %}
 							{{ plat }}
-							{%- unless forloop.last %},
-							{% endunless %}
+							{%- unless forloop.last %}, {% endunless %}
 						{% endfor %}
 						<hr />
 						{{ content }}
