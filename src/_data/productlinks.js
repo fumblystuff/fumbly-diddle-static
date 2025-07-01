@@ -1,5 +1,16 @@
 module.exports = [
   {
+    name: "Better Path Editor",
+    shortname: "BetterPathEditor",
+    releases: [
+      {
+        version: "1.0.0",
+        installerURL: "https://fumblydiddle.b-cdn.net/timestampnow/BetterPathEditor-1.0.0.0.exe",
+        date: "2025-07-15",
+        note: "Initial release"
+      }
+    ]
+  }, {
     name: "Path Backup",
     shortname: "PathBackup",
     releases: [
