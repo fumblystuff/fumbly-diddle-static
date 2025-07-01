@@ -15,15 +15,14 @@ layout: base
 				<div class="col-4 col-12-medium">
 					<section id="sidebar">
 						<section>
-							<h2>All Products</h2>
-							<hr />
+							<h2>All Products</h2>					
 							{%- if products.length > 0 %}
 							<ul class="alt">
 								{%- for product in products %}
 								<li>
-									<h4>
+									<h3>
 										<a style="cursor: pointer" href="{{product.url}}">{{ product.data.title }}</a>
-									</h4>
+									</h3>
 								</li>
 								{%- endfor %}
 							</ul>

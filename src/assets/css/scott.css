@@ -15,3 +15,11 @@ header img {
 .image-full {
   max-width: 100%;
 }
+
+p {
+ margin: 0 0 0.7rem 0; 
+}
+
+ul {
+   margin: 0 0 0.7rem 0;
+}
