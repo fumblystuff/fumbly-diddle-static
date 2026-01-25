@@ -4,8 +4,8 @@ module.exports = [
     shortname: "PasswordGenerator",
     releases: [
       {
-        version: "0.1.0",
-        installerURL: "https://fumblydiddle.b-cdn.net/passwordgenerator/PasswordGenerator-0.1.0.exe",                       
+        version: "1.0.0",
+        installerURL: "https://fumblydiddle.b-cdn.net/passwordgenerator/PasswordGenerator-1.0.0.exe",
         date: "2026-01-26",
         note: "Initial release"
       }
