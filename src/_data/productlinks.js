@@ -1,5 +1,16 @@
 module.exports = [
   {
+    name: "Password Generator",
+    shortname: "PasswordGenerator",
+    releases: [
+      {
+        version: "0.1.0",
+        installerURL: "https://fumblydiddle.b-cdn.net/passwordgenerator/PasswordGenerator-0.1.0.exe",                       
+        date: "2026-01-26",
+        note: "Initial release"
+      }
+    ]
+  }, {
     name: "Path Backup",
     shortname: "PathBackup",
     releases: [
