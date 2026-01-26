@@ -6,7 +6,7 @@ eleventyNavigation:
   order: 9
 ---
 
-{% image "src/images/fumbly-diddle-logo-300.png", "Fumbly Diddle Logo", "image-full" %}
+![Fumbly Diddle Logo](/images/fumbly-diddle-logo-300.png)
 
 During the COVID Pandemic, I created a couple of mobile apps and published them in the app stores. None of them did very well, so I recently pulled them down. When I published the apps, I needed a company name to publish them under, so Fumbly Diddle Software was born. 
 

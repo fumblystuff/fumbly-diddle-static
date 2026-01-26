@@ -17,11 +17,11 @@ You could create and maintain a simple Windows command (batch) file that copies 
 
 Start by configuring the root directory and all of the subdirectories you want copied.
 
-{% image "src/images/subcopy/subcopy-1.png", "Subdirectory Copy home screen", "image-full" %}
+![Subdirectory Copy home screen](/images/subcopy/subcopy-1.png)
 
 Next, click the **Start** button and configure the copy operation.
 
-{% image "src/images/subcopy/subcopy-2.png", "Subdirectory Copy application Copy configuration", "image-full" %}
+![Subdirectory Copy application Copy configuration](/images/subcopy/subcopy-2.png)
 
 Access the full application source on GitHub at [subdirectory-copy](https://github.com/fumblystuff/subdirectory-copy){target="_blank"}.
 

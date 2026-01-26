@@ -17,13 +17,13 @@ The **Path Backup & Restore** application allows you to quickly backup your Wind
 
 When launched, the application displays the following screen:
 
-{% image "src/images/pathbackup/app-home.png", "Path Backup home screen", "image-full" %}
+![Path Backup home screen](/images/pathbackup/app-home.png)
 
 Click the **Backup** button to back up the system path and the **Restore** to restore the system path from a backup file. 
 
 When you click either button, the application prompts you to select the file type for the backup or restore operation as shown in the following figure:
 
-{% image "src/images/pathbackup/backup-choices.png", "Path Backup options", "image-full" %}
+![Path Backup options](/images/pathbackup/backup-choices.png)
 
 Next, the application prompts you to select the target folder for the generated file. 
 

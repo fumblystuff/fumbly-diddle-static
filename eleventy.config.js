@@ -1,23 +1,22 @@
-const { EleventyHtmlBasePlugin } = require('@11ty/eleventy');
-const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-const markdownIt = require('markdown-it');
-const markdownItAttrs = require('markdown-it-attrs');
-const pluginDate = require('eleventy-plugin-date');
-const pluginRss = require('@11ty/eleventy-plugin-rss');
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const embedYouTube = require('eleventy-plugin-youtube-embed');
-const pluginImages = require("./eleventy.config.images.js");
-
-const productlinks = require('./src/_data/productlinks.js');
+import { EleventyHtmlBasePlugin } from '@11ty/eleventy';
+import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
+import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
+import markdownIt from 'markdown-it';
+import markdownItAttrs from 'markdown-it-attrs';
+import pluginDate from 'eleventy-plugin-date';
+import pluginRss from '@11ty/eleventy-plugin-rss';
+import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
+import embedYouTube from 'eleventy-plugin-youtube-embed';
+import productlinks from './src/_data/productlinks.js';
 
 // Transforms
 // https://learneleventyfromscratch.com/lesson/31.html#minifying-html-output
-const htmlMinTransform = require('./src/transforms/html-min.js');
+import htmlMinTransform from './src/transforms/html-min.js';
 
 // Create a helpful production flag
 const isProduction = process.env.NODE_ENV === 'production';
 
-module.exports = eleventyConfig => {
+export default function (eleventyConfig) {
 
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
@@ -25,7 +24,23 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPlugin(pluginDate);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
-  eleventyConfig.addPlugin(pluginImages, { debugMode: false });
+
+
+  // https://www.aleksandrhovhannisyan.com/blog/eleventy-image-transform/
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    // which file extensions to process
+    extensions: 'html',
+    // optional, output image formats
+    formats: ['jpg', 'webp'],
+    // optional, output image widths
+    widths: ['auto', 400, 800, 1024],
+    // optional, attributes assigned on <img> override these values.
+    defaultAttributes: {
+      loading: 'lazy',
+      decoding: 'async',
+      class: 'image-full'
+    }
+  });
 
   // https://github.com/11ty/eleventy/issues/2301
   const mdOptions = {
@@ -103,12 +118,9 @@ module.exports = eleventyConfig => {
   });
 
   eleventyConfig.addShortcode("downloadTable", function (productKey, doHeader = false) {
-    
+
     const product = productlinks.find(prod => prod.shortname === productKey);
-    // console.dir(product);
     const releases = product.releases;
-    // console.log(`\n"${productKey}" releases:`);
-    // console.dir(releases);
 
     var res = '';
     if (doHeader) {
@@ -124,7 +136,6 @@ module.exports = eleventyConfig => {
       res += "</tr>";
     });
     res += "</tbody></table></div>"
-    // console.log(res);
     return res;
   });
 
@@ -185,12 +196,7 @@ module.exports = eleventyConfig => {
   [
     // Data files
     "src/_data/",
-    // Template files
-    "src/assets/css/",
-    "src/assets/js/",
-    "src/assets/sass/",
-    "src/assets/webfonts/",
-    "src/images/"
+    "src/assets/"
   ].forEach((path) => {
     eleventyConfig.addPassthroughCopy(path);
   });

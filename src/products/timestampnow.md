@@ -11,11 +11,11 @@ Have you ever needed a way to change one or more of the timestamps (Created, Mod
 
 The application installs as a Windows Shell Extension, available in the Windows File Explorer context menu. Select one or more files and/or directories in Windows File Explorer, right click on any of the selected files, then choose **Timestamp Now...**.
 
-{% image "src/images/timestampnow/windows-options-menu.png", "Windows File Explorer context menu", "image-full" %}
+![Windows File Explorer context menu](/images/timestampnow/windows-options-menu.png)
 
 In the application window that opens, you control which file or directory timestamps the app updates and the format of the current time saved to file properties.
 
-{% image "src/images/timestampnow/timestampnow-ui.png", "Timestamp Now UI", "image-full" %}
+![Timestamp Now UI](/images/timestampnow/timestampnow-ui.png)
 
 Regarding the timestamp options, the application allows you to optionally zero out the milliseconds and/or seconds of the current time written to the file or directory's properties.
 
