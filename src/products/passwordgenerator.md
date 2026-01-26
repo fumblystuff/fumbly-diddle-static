@@ -5,6 +5,9 @@ platform:
   - Windows
 ---
 
+{% image "src/images/passwordgenerator/padlock-128.png", "Application icon", "image-full" %}
+
+
 The Password Generator is a simple password generator for Windows. Most modern browsers can generate and store site passwords for you, but every so often you need a password to use somewhere else but the browser. 
 
 There are a bunch of free browser-based password generators available online, but I wanted something simple to use on my desktop PC in Microsoft Windows.
@@ -22,3 +25,7 @@ Go to the [Product Documentation](https://docs.fumblydiddle.com/passwordgenerato
 ## Releases
 
 {% downloadTable "PasswordGenerator" %}
+
+***
+
+<a href="https://www.flaticon.com/free-icons/password" title="password icons">Password icon created by Smashicons - Flaticon</a>

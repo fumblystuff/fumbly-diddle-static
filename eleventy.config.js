@@ -105,10 +105,10 @@ module.exports = eleventyConfig => {
   eleventyConfig.addShortcode("downloadTable", function (productKey, doHeader = false) {
     
     const product = productlinks.find(prod => prod.shortname === productKey);
-    console.dir(product);
+    // console.dir(product);
     const releases = product.releases;
-    console.log(`\n"${productKey}" releases:`);
-    console.dir(releases);
+    // console.log(`\n"${productKey}" releases:`);
+    // console.dir(releases);
 
     var res = '';
     if (doHeader) {
@@ -124,7 +124,7 @@ module.exports = eleventyConfig => {
       res += "</tr>";
     });
     res += "</tbody></table></div>"
-    console.log(res);
+    // console.log(res);
     return res;
   });
 
