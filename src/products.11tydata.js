@@ -1,6 +1,6 @@
 // https://discord.com/channels/741017160297611315/1210750763685511168
 
-module.exports = {
+export default  {
   eleventyComputed: {
     eleventyNavigation: {
       url: (data) => {

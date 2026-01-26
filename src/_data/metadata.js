@@ -1,4 +1,4 @@
-module.exports = {
+export default {
 	title: "Fumbly Diddle Software",
 	url: "https://fumblydiddle.com",
 	language: "en",

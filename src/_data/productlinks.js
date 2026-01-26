@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   {
     name: "Password Generator",
     shortname: "PasswordGenerator",
